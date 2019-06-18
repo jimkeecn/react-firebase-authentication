@@ -5,12 +5,22 @@ import fire from './../config/firebase';
 class Login extends Component {
     constructor(props){
         super(props)
+        this.login = this.login.bind(this);
+        this.handleChange = this.handleChange.bind(this);
         this.state = {
-            email : null,
-            password: null
-        }
+            email : '',
+            password: ''
+        };
     }
    
+    login(e){
+        debugger;
+        e.preventDefault();
+        fire.auth().signInWithEmailAndPassword(this.state.email,this.state.password).then((u)=>{}).catch((err) =>{
+            console.log(err);
+        })
+    }
+
     handleChange(e){
         this.setState({[e.target.name]:e.target.value})
     }
