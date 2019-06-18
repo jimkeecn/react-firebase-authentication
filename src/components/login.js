@@ -3,17 +3,12 @@ import {Link} from 'react-router-dom';
 import fire from './../config/firebase';
 
 class Login extends Component {
-    constructor(props){
-        super(props)
-        this.login = this.login.bind(this);
-        this.handleChange = this.handleChange.bind(this);
-        this.state = {
-            email : '',
-            password: ''
-        };
-    }
+    state = {
+        email : '',
+        password: ''
+    };
    
-    login(e){
+    login = (e) =>{
         debugger;
         e.preventDefault();
         fire.auth().signInWithEmailAndPassword(this.state.email,this.state.password).then((u)=>{}).catch((err) =>{
@@ -21,7 +16,7 @@ class Login extends Component {
         })
     }
 
-    handleChange(e){
+    handleChange = (e) => {
         this.setState({[e.target.name]:e.target.value})
     }
 
