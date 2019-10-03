@@ -2,7 +2,7 @@
   // Your web app's Firebase configuration
 
   const config = {
-    apiKey: "AIzaSyBRa8oFa-T8lyz8aYomlNJeQEIwh292IvA",
+    apiKey: "-your-fire-base-key",
     authDomain: "react-firebase-authentic-86280.firebaseapp.com",
     databaseURL: "https://react-firebase-authentic-86280.firebaseio.com",
     projectId: "react-firebase-authentic-86280",
